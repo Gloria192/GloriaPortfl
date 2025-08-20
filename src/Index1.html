@@ -134,6 +134,7 @@
             <div class="work">
                 <a href="https://buildtribute.netlify.app//" target="_blank">
                     Build Attribute <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
                 <img src="photo/buildattribute.jpg" alt="Build Attribute">
                 <div class="layer">
                     <h3>Build Attribute</h3>
@@ -144,6 +145,7 @@
             <div class="work">
                 <a href="https://survey12.netlify.app/" target="_blank">
                     Survey <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
                 <img src="photo/296.jpg" alt="Survey">
                 <div class="layer">
                     <h3>Survey</h3>
@@ -192,10 +194,11 @@
                 <a href="photo/My-cv.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                <form>
+                <form id="contact-form">
                     <input type="name" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea></textarea>
+              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <input type="hidden" name="contact_number" value="">
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
             </div>
@@ -233,7 +236,7 @@
   emailjs.init("Q456E0iBwVzlF_tBZ"); // <-- YOUR_PUBLIC_KEY
 })();
 
-document.getElementById("contact").addEventListener("submit", function(event) {
+document.getElementById("contact-form").addEventListener("submit", function(event) {
   event.preventDefault();
 
   emailjs.sendForm("service_of9o7f6", "template_i5iwudr", this)
