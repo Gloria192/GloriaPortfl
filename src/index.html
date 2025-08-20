@@ -1,252 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Gloria Mutuyimana Portfolio</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Gloria Mutuyimana Portfolio</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- EmailJS library -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
-
 <body>
+
+<!-- HEADER -->
 <div id="header">
-    <div class="container">
-        <nav>
-            <!-- <img src="photo/logo.png" alt="logo" class="logo"> -->
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fas fa-times" onclick="closemenu()"></i>
-            </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-            <p>UI/UX Designer</p>
-            <h1>Hello, I'm <span>Gloria</span><br> MUTUYIMANA</h1>
-        </div>
+  <div class="container">
+    <nav>
+      <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fas fa-times" onclick="closemenu()"></i>
+      </ul>
+      <i class="fas fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+      <p>UI/UX Designer</p>
+      <h1>Hello, I'm <span>Gloria</span><br> MUTUYIMANA</h1>
     </div>
+  </div>
 </div>
 
+<!-- ABOUT -->
 <div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="photo/image11.png" alt="My Photo">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>
-                    Hello! I'm Gloria Mutuyimana, a passionate Web and Backend Developer, dedicated to writing clean,
-                    efficient, and scalable code to create beautiful and functional web applications.
-                    <br><br>
-                    I specialize in full-stack development, with expertise in HTML, CSS, and JavaScript for front-end
-                    design, alongside backend technologies that ensure robust and seamless system performance.
-                    <br><br>
-                    Currently, I am pursuing a Bachelor's Degree in Business Information Technology at the University
-                    of Kigali, strengthening my expertise in software architecture, databases, and business-driven tech
-                    solutions.
-                    <br><br>
-                    I am actively seeking a full-time position in the tech industry where I can apply my skills, grow
-                    professionally, and contribute to innovative digital solutions that merge technology and business
-                    strategy.
-                </p>
-
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
-                </div>
-
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>UI/UX</span><br>Designing Web and App Interfaces</li>
-                        <li><span>Web Development</span><br>Creating Frontend Experiences with HTML, CSS, JS</li>
-                        <li><span>Backend Development</span><br>Building APIs, Managing Databases, and Server Logic</li>
-                    </ul>
-                </div>
-
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>2024</span><br>UI/UX Design Training at Igire Rwanda (SheCanCode)</li>
-                        <li><span>2024</span><br>Frontend Development with HTML, CSS, JS</li>
-                        <li><span>2025</span><br>Backend Development at Igire Rwanda</li>
-                    </ul>
-                </div>
-
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>2014</span><br>Certificate in Mathematics, Computer, and Economics</li>
-                        <li><span>2022</span><br>Advanced Diploma in Electrical Technology</li>
-                        <li><span>2023–2026</span><br>Bachelor of Business Information Technology</li>
-                    </ul>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="photo/image11.png" alt="My Photo">
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>Hello! I'm Gloria Mutuyimana, a passionate Web and Backend Developer...</p>
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+          <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+          <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
         </div>
+
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>UI/UX</span><br>Designing Web and App Interfaces</li>
+            <li><span>Web Development</span><br>Frontend Experiences with HTML, CSS, JS</li>
+            <li><span>Backend Development</span><br>APIs, Databases, Server Logic</li>
+          </ul>
+        </div>
+
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>2024</span><br>UI/UX Training at Igire Rwanda</li>
+            <li><span>2024</span><br>Frontend Development</li>
+            <li><span>2025</span><br>Backend Development</li>
+          </ul>
+        </div>
+
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2014</span><br>Certificate in MCE</li>
+            <li><span>2022</span><br>Advanced Diploma in Electrical Technology</li>
+            <li><span>2023–2026</span><br>Bachelor of BIT</li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 
+<!-- SERVICES -->
 <div id="services">
-    <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Web Design</h2>
-                <p>Web development is the process of creating and maintaining websites or web applications...</p>
-                <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-crop-simple"></i>
-                <h2>UI/UX Design</h2>
-                <p>UI focuses on the look and feel, while UX ensures smooth, intuitive experiences...</p>
-                <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-brands fa-app-store-ios"></i>
-                <h2>App Design</h2>
-                <p>App design makes apps look great and feel easy to use...</p>
-                <a href="#">Learn more</a>
-            </div>
-        </div>
+  <div class="container">
+    <h1 class="sub-title">My Services</h1>
+    <div class="services-list">
+      <div>
+        <i class="fa-solid fa-code"></i>
+        <h2>Web Design</h2>
+        <p>Web development is the process of creating websites...</p>
+        <a href="#">Learn more</a>
+      </div>
+      <div>
+        <i class="fa-solid fa-crop-simple"></i>
+        <h2>UI/UX Design</h2>
+        <p>UI focuses on look and feel, UX ensures smooth experiences...</p>
+        <a href="#">Learn more</a>
+      </div>
+      <div>
+        <i class="fa-brands fa-app-store-ios"></i>
+        <h2>App Design</h2>
+        <p>App design makes apps look great and easy to use...</p>
+        <a href="#">Learn more</a>
+      </div>
     </div>
+  </div>
 </div>
 
+<!-- PORTFOLIO -->
 <div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-            <div class="work">
-                <a href="https://documentation2.netlify.app/" target="_blank">
-                    Documentation <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-                <img src="photo/documentation.png" alt="Documentation">
-                <div class="layer">
-                    <h3>Documentation</h3>
-                    <p>Describes web technologies like HTML and CSS.</p>
-                    <a href="documentation"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <a href="https://buildtribute.netlify.app//" target="_blank">
-                    Build Attribute <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                <img src="photo/buildattribute.jpg" alt="Build Attribute">
-                <div class="layer">
-                    <h3>Build Attribute</h3>
-                    <p>Understanding and customizing HTML attributes.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <a href="https://survey12.netlify.app/" target="_blank">
-                    Survey <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                <img src="photo/296.jpg" alt="Survey">
-                <div class="layer">
-                    <h3>Survey</h3>
-                    <p>How to design and analyze digital surveys for UI feedback.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <a href="https://animations12.netlify.app/#" target="_blank">
-                    Animation <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-                <img src="photo/animation.png" alt="Animation">
-                <div class="layer">
-                    <h3>Animation</h3>
-                    <p>CSS animations for better user experiences and interactive designs.</p>
-                </div>
-            </div>
-        </div>
-        <a href="#" class="btn">See more</a>
+  <div class="container">
+    <h1 class="sub-title">My Work</h1>
+    <div class="work-list">
+
+      <div class="work">
+        <a href="https://documentation2.netlify.app/" target="_blank">
+          Documentation <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <img src="photo/documentation.png" alt="Documentation">
+      </div>
+
+      <div class="work">
+        <a href="https://buildtribute.netlify.app/" target="_blank">
+          Build Attribute <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <img src="photo/buildattribute.jpg" alt="Build Attribute">
+      </div>
+
+      <div class="work">
+        <a href="https://survey12.netlify.app/" target="_blank">
+          Survey <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <img src="photo/296.jpg" alt="Survey">
+      </div>
+
+      <div class="work">
+        <a href="https://animations12.netlify.app/" target="_blank">
+          Animation <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <img src="photo/animation.png" alt="Animation">
+      </div>
     </div>
+    <a href="#" class="btn">See more</a>
+  </div>
 </div>
 
+<!-- CONTACT -->
 <div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p>
-                    <i class="fa-solid fa-paper-plane"></i>
-                    <a href="mailto:mutuyegloria@gmail.com">mutuyegloria@gmail.com</a>
-                </p>
-                <p>
-                    <i class="fa-solid fa-phone"></i>
-                    <a href="https://wa.me/250780263853" target="_blank">+250 780 263 853</a>
-                </p>
-                <p>
-                    <i class="fa-solid fa-location-dot"></i>
-                    Kigali, Rwanda
-                </p>
-                <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/in/gloria-mutuyimana-18a769258?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BMzQb6teLRgC%2BqreZ9TuhDQ%3D%3D">
-                        <i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-                <a href="photo/My-cv.pdf" download class="btn btn2">Download CV</a>
-            </div>
-            <div class="contact-right">
-                <form id="contact-form">
-                    <input type="name" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <input type="hidden" name="contact_number" value="">
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fa-solid fa-paper-plane"></i>
+          <a href="mailto:mutuyegloria@gmail.com">mutuyegloria@gmail.com</a></p>
+        <p><i class="fa-solid fa-phone"></i>
+          <a href="https://wa.me/250780263853" target="_blank">+250 780 263 853</a></p>
+        <p><i class="fa-solid fa-location-dot"></i> Kigali, Rwanda</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/gloria-mutuyimana-18a769258">
+            <i class="fa-brands fa-linkedin-in"></i></a>
         </div>
+        <a href="photo/My-cv.pdf" download class="btn btn2">Download CV</a>
+      </div>
+
+      <div class="contact-right">
+        <form id="contact-form">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+      </div>
     </div>
-    <div class="copyright">
-        <p>&copy; 2024 Gloria Mutuyimana. <i class="fa-solid fa-heart"></i> All rights reserved.</p>
-    </div>
+  </div>
+  <div class="copyright">
+    <p>&copy; 2024 Gloria Mutuyimana. <i class="fa-solid fa-heart"></i> All rights reserved.</p>
+  </div>
 </div>
 
+<!-- JAVASCRIPT -->
 <script>
-    function opentab(event, tabname) {
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+  function opentab(event, tabname) {
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
 
-        for (let tablink of tablinks) {
-            tablink.classList.remove("active-link");
-        }
-        for (let tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
+    for (let tablink of tablinks) { tablink.classList.remove("active-link"); }
+    for (let tabcontent of tabcontents) { tabcontent.classList.remove("active-tab"); }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+
+  var sidemenu = document.getElementById("sidemenu");
+  function openmenu() { sidemenu.style.right = "0"; }
+  function closemenu() { sidemenu.style.right = "-200px"; }
+
+  // EmailJS init
+  (function() {
+    emailjs.init("Q456E0iBwVzlF_tBZ"); // your PUBLIC KEY
+  })();
+
+  // Handle form submit
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    emailjs.sendForm("service_of9o7f6", "template_i5iwudr", this)
+      .then(() => { alert("Message sent successfully!"); },
+            (error) => { alert("Failed: " + error.text); });
+  });
 </script>
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu() {
-        sidemenu.style.right = "0";
-    }
-    function closemenu() {
-        sidemenu.style.right = "-200px";
-    }
-    (function() {
-  emailjs.init("Q456E0iBwVzlF_tBZ"); // <-- YOUR_PUBLIC_KEY
-})();
 
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-  event.preventDefault();
-
-  emailjs.sendForm("service_of9o7f6", "template_i5iwudr", this)
-    .then(() => {
-      alert("Message sent successfully!");
-    }, (error) => {
-      alert("Failed to send message: " + error.text);
-    });
-});
-
-</script>
 </body>
 </html>
